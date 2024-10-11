@@ -89,7 +89,7 @@ li{
 
 @media screen and (max-width: 980px) {
   [class^="mes-"]{
-    width: 400px;
+    width: 95%;
   }
 
   .tres-meses{
