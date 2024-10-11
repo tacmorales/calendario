@@ -1,0 +1,135 @@
+body{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+ol, ul {
+  display: grid;
+  grid-template-columns: 1.3fr repeat(7, 1fr);
+  list-style: none;
+  padding: 0;
+}
+
+li{
+  font-size:large;
+  padding: 5px 0;
+}
+
+.tres-meses{
+  justify-content: space-evenly;
+  display: flex;
+  gap: 30px;
+}
+
+.mes-octubre{
+  counter-reset: week-days-10 39;
+}
+
+.mes-noviembre{
+  counter-reset: week-days-11 43;
+}
+
+.mes-diciembre{
+  counter-reset: week-days-12 47;
+}
+
+.mes-octubre .first-day{
+  grid-column-start: 3;
+}
+
+.mes-noviembre .first-day{
+  grid-column-start: 6;
+}
+
+.mes-diciembre .first-day{
+  grid-column-start: 8;
+}
+
+.weekday{
+  background: #eee;
+  font-weight: bold;
+}
+
+.weekend{
+  color: #e71616;
+  background-color: cornsilk;
+}
+
+.mes-octubre li.week10{
+  counter-increment: week-days-10;
+}
+
+.mes-noviembre li.week11{
+  counter-increment: week-days-11;
+}
+
+.mes-diciembre li.week12{
+  counter-increment: week-days-12;
+}
+
+.week10::before{
+  content: counter(week-days-10, decimal-leading-zero);
+  font-style: italic;
+}
+
+.week11::before{
+  content: counter(week-days-11, decimal-leading-zero);
+  font-style: italic;
+}
+
+.week12::before{
+  content: counter(week-days-12, decimal-leading-zero);
+  font-style: italic;
+}
+
+
+[class^="mes-"]{
+  width: 33%;
+  max-width: 430px;
+}
+
+@media screen and (max-width: 980px) {
+  [class^="mes-"]{
+    width: 400px;
+  }
+
+  .tres-meses{
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+.propuesta{
+  color:  beige;
+  background-color: crimson;
+}
+
+.hoy{
+  background-color: greenyellow;
+}
+
+h2{
+  margin: 5px;
+}
+
+hgroup{
+  padding: 0px 30px;
+
+  h2{
+    letter-spacing: 2px;
+    font-family:'Courier New', Courier, monospace;
+    text-decoration: underline;
+    padding: 10px 0 0 0;
+    margin: 0;
+  }
+
+  p {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+
+  }
+}
+
+.dead{
+  background-color: gray;
+}
+
