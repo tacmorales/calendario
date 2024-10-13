@@ -1,3 +1,7 @@
+*{
+  margin: 0;
+}
+
 body{
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
@@ -56,31 +60,36 @@ li{
 
 .mes-octubre li.week10{
   counter-increment: week-days-10;
+  background: #eee;
+
 }
 
 .mes-noviembre li.week11{
   counter-increment: week-days-11;
+  background: #eee;
+
 }
 
 .mes-diciembre li.week12{
   counter-increment: week-days-12;
+  background: #eee;
+
 }
 
 .week10::before{
-  content: counter(week-days-10, decimal-leading-zero);
+  content: counter(week-days-10, decimal-leading-zero)"➤";
   font-style: italic;
 }
 
 .week11::before{
-  content: counter(week-days-11, decimal-leading-zero);
+  content: counter(week-days-11, decimal-leading-zero)"➤";
   font-style: italic;
 }
 
 .week12::before{
-  content: counter(week-days-12, decimal-leading-zero);
+  content: counter(week-days-12, decimal-leading-zero)"➤";
   font-style: italic;
 }
-
 
 [class^="mes-"]{
   width: 33%;
@@ -99,12 +108,23 @@ li{
 }
 
 .propuesta{
-  color:  beige;
+  color: beige;
   background-color: crimson;
+
+  &[class^="week"]{
+    background-color: #ffffff;
+    color: crimson;
+  }
 }
 
 .hoy{
   background-color: greenyellow;
+}
+
+.hoy::after{
+  content: "hoy";
+  vertical-align: sub;
+  font-size: small;
 }
 
 h2{
@@ -130,6 +150,20 @@ hgroup{
 }
 
 .dead{
-  background-color: gray;
+  background-color: rgb(182, 182, 182);
+}
+
+.outerMonth{
+  color: rgb(107, 107, 107);
+  background-color: #f3f3f3;
+}
+
+.finalTest{
+  background-color: dodgerblue;
+  &::after{
+    content: 'Test';
+    vertical-align: sub;
+    font-size: small;
+  }
 }
 
