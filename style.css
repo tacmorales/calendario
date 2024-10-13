@@ -1,169 +1,197 @@
-*{
+* {
   margin: 0;
 }
 
-body{
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
-ol, ul {
+header {
+  padding: 20px 150px 0px 0px;
+  text-align: right;
+  a {
+    text-decoration: none;
+    position:fixed;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    background: #000000;
+    color: #ffffff;
+    border-radius: 8px;
+    padding: 14px 24px 16px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 2;
+    transition: transform 200ms, background 200ms;
+    &:hover {
+      transform: translateY(-2px);
+    }
+  }
+}
+
+ol,
+ul {
   display: grid;
   grid-template-columns: 1.3fr repeat(7, 1fr);
   list-style: none;
   padding: 0;
 }
 
-li{
-  font-size:large;
+li {
+  font-size: large;
   padding: 5px 0;
 }
 
-.tres-meses{
+.row {
+  padding-bottom: 30px;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.tres-meses {
   justify-content: space-evenly;
   display: flex;
   gap: 30px;
 }
 
-.mes-octubre{
+.mes-octubre {
   counter-reset: week-days-10 39;
 }
 
-.mes-noviembre{
+.mes-noviembre {
   counter-reset: week-days-11 43;
 }
 
-.mes-diciembre{
+.mes-diciembre {
   counter-reset: week-days-12 47;
+  padding-bottom: 30px;
 }
 
-.mes-octubre .first-day{
+.mes-octubre .first-day {
   grid-column-start: 3;
 }
 
-.mes-noviembre .first-day{
+.mes-noviembre .first-day {
   grid-column-start: 6;
 }
 
-.mes-diciembre .first-day{
+.mes-diciembre .first-day {
   grid-column-start: 8;
 }
 
-.weekday{
+.weekday {
   background: #eee;
   font-weight: bold;
 }
 
-.weekend{
+.weekend {
   color: #e71616;
   background-color: cornsilk;
 }
 
-.mes-octubre li.week10{
+.mes-octubre li.week10 {
   counter-increment: week-days-10;
   background: #eee;
-
 }
 
-.mes-noviembre li.week11{
+.mes-noviembre li.week11 {
   counter-increment: week-days-11;
   background: #eee;
-
 }
 
-.mes-diciembre li.week12{
+.mes-diciembre li.week12 {
   counter-increment: week-days-12;
   background: #eee;
-
 }
 
-.week10::before{
-  content: counter(week-days-10, decimal-leading-zero)"➤";
+.week10::before {
+  content: counter(week-days-10, decimal-leading-zero) "➤";
   font-style: italic;
 }
 
-.week11::before{
-  content: counter(week-days-11, decimal-leading-zero)"➤";
+.week11::before {
+  content: counter(week-days-11, decimal-leading-zero) "➤";
   font-style: italic;
 }
 
-.week12::before{
-  content: counter(week-days-12, decimal-leading-zero)"➤";
+.week12::before {
+  content: counter(week-days-12, decimal-leading-zero) "➤";
   font-style: italic;
 }
 
-[class^="mes-"]{
+[class^="mes-"] {
   width: 33%;
   max-width: 430px;
 }
 
 @media screen and (max-width: 980px) {
-  [class^="mes-"]{
+  [class^="mes-"] {
     width: 95%;
   }
 
-  .tres-meses{
+  .tres-meses {
     align-items: center;
     flex-direction: column;
   }
 }
 
-.propuesta{
+.propuesta {
   color: beige;
   background-color: crimson;
 
-  &[class^="week"]{
+  &[class^="week"] {
     background-color: #ffffff;
     color: crimson;
   }
 }
 
-.hoy{
+.hoy {
   background-color: greenyellow;
 }
 
-.hoy::after{
+.hoy::after {
   content: "hoy";
   vertical-align: sub;
   font-size: small;
 }
 
-h2{
+h2 {
   margin: 5px;
 }
 
-hgroup{
+hgroup {
   padding: 0px 30px;
 
-  h2{
+  h2 {
     letter-spacing: 2px;
-    font-family:'Courier New', Courier, monospace;
+    font-family: "Courier New", Courier, monospace;
     text-decoration: underline;
     padding: 10px 0 0 0;
     margin: 0;
   }
 
   p {
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
     margin: 0;
-
   }
 }
 
-.dead{
+.dead {
   background-color: rgb(182, 182, 182);
 }
 
-.outerMonth{
+.outerMonth {
   color: rgb(107, 107, 107);
   background-color: #f3f3f3;
 }
 
-.finalTest{
+.finalTest {
   background-color: dodgerblue;
-  &::after{
-    content: 'Test';
+  &::after {
+    content: "Test";
     vertical-align: sub;
     font-size: small;
   }
 }
-
