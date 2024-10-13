@@ -6,10 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
   <header>
-    <a href="/withoutOctubre.html">Ver solo 2 meses</a>
+    <button type="button" id="boton">Ver solo 2 meses</button>
   </header>
   <main>
     <section class="row 0">
@@ -24,7 +25,7 @@
         <p>Se usan las 3 semanas espaciadas [semanas número 45, 49, 52].<br>En este caso el día de <strong>la evaluación final cae entre el 03 y el 6 de Enero.</strong></p>
       </hgroup>
       <div class="tres-meses">
-        <div class="mes-octubre">
+        <div class="mes-octubre esconder">
           <h2>Octubre</h2>
           <ul class="calendar">
             <li class="weekday">Week</li>
@@ -191,7 +192,7 @@
         <p>Se usan 2 semanas espaciadas  [semanas número 46 y 51]. <br> En este caso el día de <strong>la evaluación final cae entre el 27 y el 30 de Diciembre</strong></p>
       </hgroup>
       <div class="tres-meses">
-        <div class="mes-octubre">
+        <div class="mes-octubre esconder">
           <h2>Octubre</h2>
           <ul class="calendar">
             <li class="weekday">Week</li>
@@ -357,7 +358,7 @@
         <p>Se usa 1 semana justo antes del módulo 9 [semana número 50].<br>En este caso <strong>la evaluación final cae el 20 de Diciembre</strong></p>
       </hgroup>
       <div class="tres-meses">
-        <div class="mes-octubre">
+        <div class="mes-octubre esconder">
           <h2>Octubre</h2>
           <ul class="calendar">
             <li class="weekday">Week</li>
@@ -408,7 +409,7 @@
             <li class="weekend">31</li>
           </ol>
         </div>
-        <div class="mes-noviembre">
+        <div class="mes-noviembre esconder">
           <h2>Noviembre</h2>
           <ul class="calendar">
             <li class="weekday">Week</li>
@@ -518,5 +519,24 @@
       </div>
     </section>
   </main>
+  <script refer>
+    let but = document.getElementById("boton");
+    console.log(but.innerHTML)
+
+    let mostrandoTodo = true;
+    const mesesAEsconder = document.getElementsByClassName("esconder");
+    document.addEventListener("click", (e) => {
+      [...mesesAEsconder].forEach((element, index, array) => {
+        element.classList.toggle("none");
+      });
+      if (mostrandoTodo){
+        mostrandoTodo = false;
+        boton.innerHTML = "Ver todos los meses";
+      } else{
+        mostrandoTodo = true;
+        boton.innerHTML = "Ver solo 2 meses";
+      }
+    });
+  </script>
 </body>
 </html>

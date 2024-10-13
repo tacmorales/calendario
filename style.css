@@ -10,7 +10,7 @@ body {
 header {
   padding: 20px 150px 0px 0px;
   text-align: right;
-  a {
+  button {
     text-decoration: none;
     position:fixed;
     outline: 0;
@@ -194,4 +194,8 @@ hgroup {
     vertical-align: sub;
     font-size: small;
   }
+}
+
+.none{
+  display: none;
 }
