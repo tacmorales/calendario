@@ -19,7 +19,7 @@ header {
     background: #000000;
     color: #ffffff;
     border-radius: 8px;
-    padding: 14px 24px 16px;
+    padding: 7px 8px 8px 8px;
     font-size: 18px;
     font-weight: 700;
     line-height: 2;
@@ -83,6 +83,7 @@ li {
 .weekday {
   background: #eee;
   font-weight: bold;
+  font-size: 0.05vw + 1rem;
 }
 
 .weekend {
@@ -123,18 +124,14 @@ li {
 [class^="mes-"] {
   width: 33%;
   max-width: 430px;
+
+  h2{
+    margin-bottom: 0;
+    font-size: 22px;
+  } 
 }
 
-@media screen and (max-width: 980px) {
-  [class^="mes-"] {
-    width: 95%;
-  }
 
-  .tres-meses {
-    align-items: center;
-    flex-direction: column;
-  }
-}
 
 .propuesta {
   color: beige;
@@ -166,15 +163,18 @@ hgroup {
   h2 {
     letter-spacing: 2px;
     font-family: "Courier New", Courier, monospace;
-    text-decoration: underline;
+    text-decoration: underline cornflowerblue;
+    text-decoration-thickness: 3px;
     padding: 10px 0 0 0;
     margin: 0;
+    font-size: clamp(1.5rem, 4vw + 1rem, 3rem);
   }
 
   p {
     font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
       "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-    margin: 0;
+    margin: 0 0 8px 0;
+    font-size: large;
   }
 }
 
@@ -198,4 +198,25 @@ hgroup {
 
 .none{
   display: none;
+}
+
+@media screen and (max-width: 980px) {
+  [class^="mes-"] {
+    width: 95%;
+  }
+
+  .tres-meses {
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .row {
+    padding-bottom: 30px;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .tres-meses {
+    gap: 10px;
+  }
 }

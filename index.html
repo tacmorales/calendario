@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
   <header>
@@ -22,7 +21,7 @@
     <section class="row 1">
       <hgroup>
         <h2>Opción 1</h2>
-        <p>Se usan las 3 semanas espaciadas [semanas número 45, 49, 52].<br>En este caso el día de <strong>la evaluación final cae entre el 03 y el 6 de Enero.</strong></p>
+        <p>Se usan las 3 semanas espaciadas [semanas número 45, 49, 52].<br>En este caso <strong>la evaluación final cae entre el 03 y el 06 de Enero.</strong></p>
       </hgroup>
       <div class="tres-meses">
         <div class="mes-octubre esconder">
@@ -189,7 +188,7 @@
     <section class="row 2">
       <hgroup>
         <h2>Opción 2</h2>
-        <p>Se usan 2 semanas espaciadas  [semanas número 46 y 51]. <br> En este caso el día de <strong>la evaluación final cae entre el 27 y el 30 de Diciembre</strong></p>
+        <p>Se usan 2 semanas espaciadas  [semanas número 46 y 51]. <br> En este caso <strong>la evaluación final cae entre el 27 y el 30 de Diciembre</strong></p>
       </hgroup>
       <div class="tres-meses">
         <div class="mes-octubre esconder">
@@ -519,11 +518,11 @@
       </div>
     </section>
   </main>
-  <script refer>
+  <script>
     let boton = document.getElementById("boton");
     let mostrandoTodo = true;
     const mesesAEsconder = document.getElementsByClassName("esconder");
-    document.addEventListener("click", (e) => {
+    boton.addEventListener("click", (e) => {
       [...mesesAEsconder].forEach((element, index, array) => {
         element.classList.toggle("none");
       });
