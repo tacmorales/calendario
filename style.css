@@ -220,3 +220,11 @@ hgroup {
     gap: 10px;
   }
 }
+
+.row:nth-child(1){
+  padding-top: 100px;
+}
+
+.row:last-child{
+  padding-bottom: 50px;
+}
